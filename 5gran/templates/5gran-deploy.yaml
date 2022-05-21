@@ -13,14 +13,15 @@ spec:
   template:
     metadata:
       annotations:
+        k8s.v1.cni.cncf.io/networks: '[{"name": "macvlan-multus", "ips": [ "192.168.214.201/24"]}]'
         sidecar.istio.io/inject: "false"
       labels:
         epc-mode: 5gran
-    spec:    
+    spec:
       containers:
       - name: gnb
         imagePullPolicy: {{ .Values.ran.image.pullPolicy }}
-        image: "{{ .Values.ran.image.repository }}:{{ .Values.ran.image.tag }}" 
+        image: "{{ .Values.ran.image.repository }}:{{ .Values.ran.image.tag }}"
         command: ["/bin/sh","-c","./nr-gnb -c /open5gs/config-map/5gran-gnb-configmap.yaml"]
         volumeMounts:
           - name: 5gran-gnb-config
@@ -55,7 +56,7 @@ spec:
       volumes:
         - name: 5gran-gnb-config
           configMap:
-            name: 5gran-gnb-config     
+            name: 5gran-gnb-config
         - name: 5gran-ue-config
           configMap:
             name: 5gran-ue-config

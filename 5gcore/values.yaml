@@ -2,18 +2,18 @@
 
 open5gcore:
   image:
-    repository: docker.io/efatnar/open5gcore
+    repository: quay.io/kskels/open5gcore
     pullPolicy: IfNotPresent
     tag: "v2.0"
     oldtag: "v1.1"
 
 webui:
   image:
-    repository: docker.io/efatnar/open5gcore-webui
+    repository: quay.io/kskels/open5gcore-webui
     pullPolicy: IfNotPresent
     tag: "v1.1"
 
-dnn: internet  
+dnn: internet
 
 amf:
   mcc: 208
@@ -22,8 +22,8 @@ amf:
 
 k8s:
   interface: eth0
-  tuninterface: ogstun
-  
+  ext_interface: net1
+
 cnf:
   amf:
     sctp:

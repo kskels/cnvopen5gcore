@@ -10,8 +10,8 @@ spec:
   ports:
     - protocol: UDP
       port: 8805
-      targetPort: 8805    
---- 
+      targetPort: 8805
+---
 apiVersion: v1
 kind: Service
 metadata:
@@ -26,7 +26,7 @@ spec:
     - protocol: UDP
       port: 8805
       targetPort: 8805
-      nodePort: {{ .Values.cnf.upf.nodeport }}    
+      nodePort: {{ .Values.cnf.upf.nodeport }}
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -42,10 +42,11 @@ spec:
   template:
     metadata:
       annotations:
+        k8s.v1.cni.cncf.io/networks: '[{"name": "macvlan-multus", "ips": [ "192.168.214.102/24"]}]'
         sidecar.istio.io/inject: "false"
       labels:
         epc-mode: upf
-    spec:   
+    spec:
       containers:
         - name: upf
           image: "{{ .Values.open5gcore.image.repository }}:{{ .Values.open5gcore.image.oldtag }}"
@@ -68,15 +69,10 @@ spec:
           - name: open5gs-upf-config
             mountPath: /open5gs/config-map/upf.yaml
             subPath: "upf.yaml"
-          - mountPath: /dev/net/tun
-            name: dev-net-tun            
       volumes:
         - name: open5gs-upf-config
           configMap:
             name: open5gs-upf-config
-        - name: dev-net-tun
-          hostPath:
-            path: /dev/net/tun
 ---
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler

@@ -1,5 +1,5 @@
 apiVersion: v2
-name: open5gcore-helm
+name: 5gcore
 description: A Helm Chart for Open 5G Core
 
 type: application

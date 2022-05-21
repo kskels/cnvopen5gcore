@@ -5,10 +5,10 @@ ran:
     pullPolicy: IfNotPresent
     tag: "v2.0"
   amf:
-    address: 172.27.201.37
-    port: 30412
+    address: 192.168.214.101
+    port: 38412
   gtp:
-    localaddress: 0.0.0.0
+    localaddress: 192.168.214.201
   user:
     imsi: "imsi-208930000000001"
     imei: "356938035643801"

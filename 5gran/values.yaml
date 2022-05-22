@@ -1,7 +1,7 @@
 # Default values for 5gran.
 ran:
   image:
-    repository: docker.io/efatnar/ueransim
+    repository: quay.io/kskels/ueransim
     pullPolicy: IfNotPresent
     tag: "v2.0"
   amf:

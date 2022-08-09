@@ -71,7 +71,7 @@ spec:
       annotations:
         cluster-autoscaler.kubernetes.io/safe-to-evict: "false"
         sidecar.istio.io/inject: "true"
-        k8s.v1.cni.cncf.io/networks: '[{"name": "macvlan-multus", "ips": [ "192.168.214.101/24"]}]'
+        k8s.v1.cni.cncf.io/networks: '[{"name": "sriov-net1", "ips": [ "192.168.214.101/24"]}]'
       labels:
         epc-mode: amf
     spec:

@@ -1,0 +1,11 @@
+apiVersion: sriovnetwork.openshift.io/v1
+kind: SriovNetwork
+metadata:
+  name: sriov-net1
+  namespace: openshift-sriov-network-operator
+spec:
+  resourceName: x710_netdevice_1
+  networkNamespace: open5gcore
+
+  ipam: '{"type":"static"}'
+  vlan: 4004

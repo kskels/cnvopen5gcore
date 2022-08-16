@@ -4,7 +4,7 @@ metadata:
   name: sriov-net1
   namespace: openshift-sriov-network-operator
 spec:
-  resourceName: x710_netdevice_1
+  resourceName: x710_0_netdevice
   networkNamespace: open5gcore
 
   ipam: '{"type":"static"}'

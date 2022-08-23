@@ -1,7 +1,7 @@
 apiVersion: sriovnetwork.openshift.io/v1
 kind: SriovNetwork
 metadata:
-  name: sriov-net1
+  name: open5gran-sriov-net1
   namespace: openshift-sriov-network-operator
 spec:
   resourceName: x710_0_netdevice

@@ -12,7 +12,7 @@ data:
         no_ipv6: true
     smf:
         sbi:
-        - addr: ::/0
+        - addr: ::0
           advertise: open5gs-smf
         pfcp:
           dev: {{ .Values.k8s.interface }}
@@ -24,7 +24,7 @@ data:
          - addr: 10.45.0.1/16
            dnn: {{ .Values.dnn }}
         dns:
-          - 8.8.8.8
+          - 2600:1700:4c0:800f:208:a2ff:fe12:4257
         mtu: 1400
     nrf:
      sbi:

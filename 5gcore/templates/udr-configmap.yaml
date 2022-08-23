@@ -11,8 +11,8 @@ data:
     db_uri: mongodb://mongodb-svc/open5gs
     udr:
       sbi:
-      - addr: 0.0.0.0
+      - addr: ::/0
         advertise: open5gs-udr
     nrf:
      sbi:
-      name: open5gs-nrf  
+      name: open5gs-nrf

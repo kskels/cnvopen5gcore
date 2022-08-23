@@ -71,4 +71,4 @@ spec:
         - name: NODE_ENV
           value: "production"
         - name: HOSTNAME
-          value: '0.0.0.0'
+          value: '::/0'

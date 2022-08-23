@@ -8,11 +8,11 @@ data:
   pcf.yaml: |
     #logger:
        #file: /var/log/open5gs/pcf.log
-    db_uri: mongodb://mongodb-svc/open5gs    
+    db_uri: mongodb://mongodb-svc/open5gs
     pcf:
-      sbi:     
-      - addr: 0.0.0.0
+      sbi:
+      - addr: ::/0
         advertise: open5gs-pcf
     nrf:
      sbi:
-      name: open5gs-nrf 
+      name: open5gs-nrf

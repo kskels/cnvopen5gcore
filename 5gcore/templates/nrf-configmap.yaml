@@ -10,4 +10,4 @@ data:
        #file: /var/log/open5gs/nrf.log
     nrf:
         sbi:
-          addr: ::/0
+          addr: ::0

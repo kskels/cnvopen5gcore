@@ -15,7 +15,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: open5gs-mongodb
+      app: quay.io/kskels/open5gs-mongodb
   template:
     metadata:
       annotations:

@@ -8,7 +8,7 @@ data:
   ausf.yaml: |
     ausf:
       sbi:
-      - addr: ::/0
+      - addr: ::0
         advertise: open5gs-ausf
     nrf:
      sbi:

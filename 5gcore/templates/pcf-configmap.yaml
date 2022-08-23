@@ -11,7 +11,7 @@ data:
     db_uri: mongodb://mongodb-svc/open5gs
     pcf:
       sbi:
-      - addr: ::/0
+      - addr: ::0
         advertise: open5gs-pcf
     nrf:
      sbi:

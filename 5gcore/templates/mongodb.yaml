@@ -15,7 +15,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: quay.io/kskels/open5gs-mongodb
+      app: open5gs-mongodb
   template:
     metadata:
       annotations:
@@ -24,7 +24,7 @@ spec:
         app: open5gs-mongodb
     spec:
       containers:
-      - image: free5gmano/nextepc-mongodb
+      - image: quay.io/kskels/nextepc-mongodb
         name: open5gs-mongodb
         ports:
         - containerPort: 27017

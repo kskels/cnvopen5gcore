@@ -10,7 +10,7 @@ data:
       #file: /var/log/open5gs/udm.log
     udm:
       sbi:
-      - addr: ::/0
+      - addr: ::0
         advertise: open5gs-udm
     nrf:
      sbi:

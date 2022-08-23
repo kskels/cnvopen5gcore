@@ -5,7 +5,7 @@ metadata:
   namespace: openshift-sriov-network-operator
 spec:
   resourceName: x710_0_netdevice
-  networkNamespace: open5gran
+  networkNamespace: open5gcore
 
   ipam: '{"type":"static"}'
   vlan: 4004

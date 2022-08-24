@@ -42,7 +42,7 @@ spec:
   template:
     metadata:
       annotations:
-        k8s.v1.cni.cncf.io/networks: '[{"name": "open5gcore-sriov-net1", "ips": [ "192.168.214.102/24"], "default-route": ["192.168.214.1"] }]'
+        k8s.v1.cni.cncf.io/networks: '[{"name": "open5gcore-sriov-net1", "ips": [ "192.168.214.102/24"] }]'
         sidecar.istio.io/inject: "false"
       labels:
         epc-mode: upf

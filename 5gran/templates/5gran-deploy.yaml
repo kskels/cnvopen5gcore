@@ -13,7 +13,7 @@ spec:
   template:
     metadata:
       annotations:
-        k8s.v1.cni.cncf.io/networks: '[{"name": "open5gran-sriov-net1", "ips": [ "192.168.214.201/24"]}]'
+        k8s.v1.cni.cncf.io/networks: '[{"name": "macvlan-multus", "ips": [ "192.168.214.201/24"]}]'
         sidecar.istio.io/inject: "false"
       labels:
         epc-mode: 5gran
@@ -51,6 +51,7 @@ spec:
         command: ["/bin/sh", "-c"]
         args:
         - iptables -I INPUT -i uesimtun0 -j ACCEPT;
+          sysctl -w net.ipv6.conf.all.disable_ipv6=1;
           while true; do sleep 30; done;
       volumes:
         - name: 5gran-gnb-config

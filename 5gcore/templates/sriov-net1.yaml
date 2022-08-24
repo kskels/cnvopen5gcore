@@ -9,3 +9,4 @@ spec:
 
   ipam: '{"type":"static"}'
   vlan: 4004
+  trust: "on"

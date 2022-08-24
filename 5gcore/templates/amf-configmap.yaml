@@ -8,7 +8,7 @@ data:
   amf.yaml: |
     amf:
         sbi:
-        - addr: ::0
+        - dev: eth0
           advertise: open5gs-amf
         ngap:
           dev: {{ .Values.k8s.ext_interface }}

@@ -1,0 +1,52 @@
+---
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: open5gcore-anyuid
+subjects:
+  - kind: ServiceAccount
+    name: default
+    namespace: open5gcore
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: 'system:openshift:scc:anyuid'
+---
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: open5gcore-hostaccess
+subjects:
+  - kind: ServiceAccount
+    name: default
+    namespace: open5gcore
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: 'system:openshift:scc:hostaccess'
+---
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: open5gcore-hostmount-anyuid
+subjects:
+  - kind: ServiceAccount
+    name: default
+    namespace: open5gcore
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: 'system:openshift:scc:hostmount-anyuid'
+---
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: open5gcore-privileged
+subjects:
+  - kind: ServiceAccount
+    name: default
+    namespace: open5gcore
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: 'system:openshift:scc:privileged'
